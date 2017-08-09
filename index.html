@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 17 | Rich Man's Reddit</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body ng-app="awwApp">
+        <div class="container">
+            <div class="row headerDiv">
+                <div class="col-xs-12 headerSection">
+                    <h1 id="pageHeader">15 Things That Make You Go "Awww"</h1>
+                </div>
+            </div>
+            <!--PAGE CONTENT HERE-->
+            <div class="row awwContent">
+                <table class="table" ng-controller="awwController">
+                    <thead>
+                        <tr>
+                            <th>Photo</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Upvotes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="cutie in cuties">
+                            <td><a href="https://reddit.com{{cutie.data.permalink}}"><img ng-src="{{cutie.data.thumbnail}}"></a></td>
+                            <td>{{cutie.data.title}}</td>
+                            <td>{{cutie.data.author}}</td>
+                            <td>{{cutie.data.score}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--PAGE CONTENT ENDS-->
+        </div>
+    <script src="lib/angular.min.js" charset="utf-8"></script>
+    <script src="lib/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    </body>
+</html>
