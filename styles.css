@@ -50,6 +50,10 @@ body {
 	background-color: #595959;
 }
 
+.table {
+	margin-bottom: 0;
+}
+
 thead {
 	height: 30px;
 	line-height: 30px;
@@ -57,12 +61,18 @@ thead {
 
 th {
 	text-align: center;
-	border: 10px inset #B6E6FA;
+    border-left: 10px inset #B6E6FA;
+    border-right: 10px inset #B6E6FA;
 	border-radius: 40px;
 	width: 25%;
 	height: 100%;
 	font-size: 18px;
 	transition: background-color 1.25s;
+}
+
+td {
+	border-left: 10px inset #B6E6FA;
+    border-right: 10px inset #B6E6FA;
 }
 
 tbody tr {
